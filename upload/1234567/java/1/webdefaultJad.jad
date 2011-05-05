@@ -1,0 +1,9 @@
+MIDlet-Name: 超级玛利兄弟2
+MIDlet-Version: 1.0
+MIDlet-Vendor: jasonlindai
+MIDlet-Jar-Size: 136889
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0
+MIDlet-Jar-URL: SperMario.jar
+MIDlet-Install-Notify: http://www.mobango.com/swarea/services/installApp/51564
+MIDlet-Delete-Notify: http://www.mobango.com/swarea/services/deleteApp/51564

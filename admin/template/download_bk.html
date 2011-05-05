@@ -1,0 +1,65 @@
+<{include file="header.html"}>
+<div id="currentPosition">
+	<p></p>
+</div>
+<div id="rightTop"> 
+    <h3>Thống kê hành động của khách hàng </h3> 
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="download.php" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				<{$_title_phone}> : 
+				<input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" id="Search" class="formbtn" value="<{$_searching}>" /> 
+          </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="keyword.php" method="post">
+  <table width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th class="firstCell"><input type="checkbox" name="idAll" id="idAll" onClick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th><label for="idAll">Số điện thoại</label></th>
+		  <th>Loại máy</th>
+		  <th>Nội dung trả về</th>
+		  <th>Thời gian</th>
+		  <th>Sửa lý</th>
+		</tr>
+    </thead>
+    <tbody>
+		<{foreach from=$Items item=item name=adzone}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onClick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.msisdn}>"><{$item.msisdn}></label></td>
+		  <td><{$item.device_model_name}></td>
+		  <td><{$item.content}>
+		  <td><{$item.create_on}></td>
+		  <td class="handler">
+           <ul id="handler_icon">
+            <li><a class="btn_delete" href="keyword.php?id=<{$item.id}>&do=del" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_edit" href="keyword.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+          </ul> 
+		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+<{include file="footer.html"}>

@@ -1,0 +1,17 @@
+&title=Inner+Background,{font-size: 22px; color: #000000}&
+&x_axis_steps=1&
+&y_legend=Open Flash Chart,12,0x736AFF&
+&y_ticks=5,10,4&
+&line_dot=3,#8BB1A1,Visitors,10,5&
+&line_hollow_2=2,#BAA8BD,Friends,10,4&
+&values=16,18,17,16,12,18,12,17,17&
+&values_2=9,9,10,9,8,10,10,6,8&
+&x_labels=Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep&
+&y_min=0&
+&y_max=20&
+&bg_colour=#E4F5FC&
+&x_axis_colour=#8499A4&
+&x_grid_colour=#E4F5FC&
+&y_axis_colour=#8499A4&
+&y_grid_colour=#E4F5FC&
+&inner_background=#E3F0FD,#CBD7E6,90&

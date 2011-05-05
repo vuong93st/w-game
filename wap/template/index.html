@@ -1,0 +1,32 @@
+<{include file="header.html"}>
+
+<div class="htmlFrame">
+  <h1>Games <span class="xsmall">| Danh mục: <a href="#">Tất cả </a></span></h1>
+  <div class="itemsFrame"><div class="padBot5">
+    <div class="xsmall"><a id="page-new" href="index.php?page=new">Mới </a> | <a id="page-recommend" href="index.php?page=recommend">Bầu chọn </a> | <a id="page-promotion" href="index.php?page=promotion">Khuyến mãi </a></div>
+  </div><div>
+  
+  <{foreach from=$Items item="item"}>
+  
+  <div class="item">
+    <a class="" href="content.php?id=<{$item.id}>" style="display: block; text-decoration: none;"><img class="pgthumb" src="<{$item.image}>" alt="" align="left" height="32" width="32"><span style="color: #990000; text-decoration: underline;"><{$item.name}></span><br></a> 
+    <a href="#" style="color:#000000">Tải về   (<{$item.price}>) vnđ</a></div>	
+  </div>
+  
+  <{foreachelse}>
+  		 <div class="item">
+		 		<div style="color:#FF0000;font-style:italic">Không có dữ liệu nào trả về!</div>
+		 </div>
+  <{/foreach}>
+   
+  </div>
+  
+  <div class="pgLine"></div><div><{$ByPages}></div>
+  <br><div><div class="padBot10"><div class="xsmall"><a id="page-new-bottom" href="index.php?page=new">Mới </a> | <a id="page-recommend-bottom" href="index.php?page=recommend">Bầu chọn </a> | <a id="page-promotion-bottom" href="index.php?page=promotion">Khuyến mãi </a></div>
+  </div>
+  <span class="xsmall">Danh mục : <a href="#">Tất cả </a></span><br>
+  </div>
+  </div><div class="padBot10"></div></div>
+
+<{include file="footer.html"}>
+

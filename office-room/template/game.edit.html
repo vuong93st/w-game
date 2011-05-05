@@ -1,0 +1,74 @@
+<{assign var="page_title" value="`$_product_management`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+    <div class="sidebar">
+       <div class="sidebar_menu">
+         <{include file="menu.html"}>
+       </div>
+    </div>
+     <div class="main_content">
+	 <div class="blank"></div>
+	 <div class="offer_banner"><img src="images/offer_01.gif" /></div>	
+<{fetch file="../scripts/date.js"}>
+<div id="currentPosition">
+	<p><{$_your_current_position}> Quản lý file game &raquo; <{$_standards}></p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_standards}></h3> 
+    <ul class="subnav">
+		<li><a href="game.php?pid=<{$smarty.get.pid}>">Quản lý file game</a></li>
+        <li><a class="btn1" href="game.php?pid=<{$smarty.get.pid}>&do=edit"><span>Thêm/Sửa xóa</span></a></li>
+        <li><a href="standard.php?do=type"><{$_types}></a></li>
+    </ul>
+</div>
+<div class="info">
+  <form action="game.php?pid=<{$smarty.get.pid}>" method="post" id="EditFrm" name="edit_frm" enctype="multipart/form-data">
+  <input type="hidden" name="id" value="<{$item.id}>" />
+  <input type="hidden" name="page" value="<{$smarty.get.page}>" />
+  <input type="hidden" name="data[pid]" value="<{$smarty.get.pid}>" />
+  
+    <table class="infoTable">
+      <tr>
+        <th class="paddingT15"> Category:</th>
+        <td class="paddingT15 wordSpacing5">
+		<select name="data[standard][type_id]">
+		<{html_options options=$StandardTypes selected=$item.type_id}>
+		 </select>		</td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> Issued time:</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[publish_time]" id="date1" value="<{$item.publish_date}>" /><span class="btn_calendar" id="calendar-date1"></span></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> Implementation time:</th>
+        <td class="paddingT15 wordSpacing5"><input name="data[force_time]" value="<{$item.force_date}>" id="date2" /><span class="btn_calendar" id="calendar-date2"></span></td>
+      </tr>
+      <tr>
+        <th class="paddingT15"> Attachment:</th>
+        <td class="paddingT15 wordSpacing5"><input name="attach" type="file" id="attach" /><{if $item.attach}><br /><br><{$item.attach}><{/if}></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td class="ptb20">
+			<input class="formbtn" type="submit" name="save" value="<{$_save}>" />		</td>
+      </tr>
+    </table>
+  </form>
+</div>
+</div>
+<script>
+    Calendar.setup({
+        trigger    : "calendar-date1",
+		animation  : false,
+        inputField : "date1",
+		onSelect   : function() { this.hide() }
+    });
+    Calendar.setup({
+        trigger    : "calendar-date2",
+		animation  : false,
+        inputField : "date2",
+		onSelect   : function() { this.hide() }
+    });
+</script>
+
+<{include file="footer.html"}>

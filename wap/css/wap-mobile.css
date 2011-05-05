@@ -1,0 +1,77 @@
+.ca{ padding-top: 10px; padding-bottom: 10px;}
+.itemLinks{ padding-top: 6px; }
+.error{ color:#ee0000; }
+.fHeader{color:#000000;font-size:small;margin-bottom:5px;font-weight:bold; margin-top: 10px; padding-left: 3px;}
+.row1{margin-bottom:0px; border-top:1px #bbbbbb dashed;padding-bottom:2px;padding-top:2px; margin:0px;}
+.row2{margin-bottom:0px;background-color:#ffffff;border-top:1px dashed #bbbbbb;padding-bottom:2px;padding-top:2px;  margin:0px;}
+.row_single{margin-bottom:0px;background-color:#ffffff; border-top:1px dashed #bbbbbb;border-bottom:1px dashed #bbbbbb;padding-bottom:2px;padding-top:2px;}
+.zFQuote{padding:15px 0px;background:#f9f9f9;font-size:x-small;}
+.fQH{color:#555555;font-style:italic;}
+a {	color:#990000;text-decoration:none;text-decoration:underline}
+a:hover{text-decoration:underline;}
+.imenu{border:1px #ffffff solid;margin-top:4px;}
+a .imenu {margin-right:4px;}
+a:focus .imenu {border:1px #888888 solid;}
+a:hover .imenu {border:1px #888888 solid;}
+a:active .imenu {border:1px #888888 solid;}
+form {margin-bottom:12px;}
+h1{font-weight: bold; font-size: 120%; padding-bottom: 5px; padding-top: 5px; padding-left: 3px; margin:0px;}
+h2{color:#000000;font-weight:bold;font-size:small;margin-bottom:11px; padding-top: 10px; margin:0;}
+img.pgthumb{margin-right:5px;vertical-align:middle; border:0px;}
+img.avth{margin-right:5px;vertical-align:middle;}
+span.date{ font-size:x-small;color:#517ca8;}
+img.fstat{vertical-align:middle;margin-right:4px;}
+.dlText, .dlText a{ font-size: small; }
+.zerozero {width:0em;height:0em;}
+.logo {margin-bottom:14px;text-align:center;}
+.smaato	{}
+.smaatoText	{}
+.zcodeHelp{ text-decoration: none; font-weight: bold;}
+.sortOpt {font-size:x-small;background-color:#f0f0f0;padding:2px;border-bottom:1px #bbb solid;border-top:1px #bbb solid;}
+/** WAP rewamp 2009-01-28 */
+body{font-family: arial,helvetica,verdana,sans-serif;margin: 0px;font-size: small;}
+.rl{padding: 3px;	margin-top: 3px;}
+.rlA{color: #990000;font-size:smaller}
+.hUp{color: white;	background: #000000;font-size: x-small;	padding: 5px 2px 3px 2px;}
+.hLo{background: #EEEEEE;font-size: xx-small;text-align: right;	padding: 5px 5px 2px 0px;border-bottom: 1px solid #cccccc;}
+.noborder{border: 0px;}
+.padLeft3{padding-left: 3px;}
+.pad3{padding: 3px;}
+.padTop3{padding-top: 3px;}
+.padTop5{padding-top: 5px;}
+.padTop10{padding-top: 10px;}
+.padBot1{padding-bottom: 1px;}
+.padBot5{padding-bottom: 5px;}
+.padBot10{padding-bottom: 10px;}
+.fMenu{	padding-left: 3px; }
+.fLinks{padding-top: 10px;font-size:smaller;padding-left: 3px; line-height: 2em;}
+.fNotice{font-size:xx-small;padding:3px;}
+.trusteDiv{	padding-top:10px;	padding-left: 3px;}
+.searchFormDiv{	border-top: 0px solid #dddddd; padding-left:2px; background: #eee; margin-top: 3px; padding: 3px 5px;}
+.item{ 	border-top: 1px dashed #bbbbbb;	margin: 3px 0;	padding-top:3px;}
+.clear{	clear: both;}
+.gameRow{border-top: 1px dashed #dddddd; margin: 3px 0; padding-top:3px; }
+.avatar{float:left;padding-right:4px;}
+.xsmall{font-size: x-small;}
+.small{font-size: small;}
+.online{color:#0a7712;font-weight:bold;}
+.navLink{ font-weight: bold;}
+.advertHeader{font-size: xx-small; color: #aaaaaa; padding-left: 3px; padding-top: 7px; background: white;}
+.advertCont{color:#840606;margin:4px 0px 4px 0px;}
+.advertCont a {color:#840606;font-weight:normal;}
+.adline{border-top: 1px solid #aaaaaa; padding-bottom: 15px;}
+.noticeError{border: 1px solid #BE1E2D; font-weight: bold; font-size: normal; padding: 3px; background: #fff5f5;}
+.noticeInfo{border: 1px solid #0000ff; font-weight: bold; font-size: normal; padding: 3px;  background: #fff9d7;}
+.noticeSuccess{border: 1px solid #74B64A; font-weight: bold; font-size: normal; padding: 3px; background: #f5f5ff;}
+.htmlFrame{padding-left: 2px; padding-top:2px;}
+.itemsFrame{padding-left: 3px; padding-top: 10px;}
+.pgLine{border-top: 1px dashed #cccccc; padding-bottom: 10px;}
+.vPad10{padding: 10px 0px;}
+.fEdited{font-style: italic; font-size: xx-small; padding-top:10px;}
+.fTopicHeader{font-size: x-small; padding: 5px 0px;}
+.img{border: 0px; vertical-align:middle;}
+.newSpan {font-weight:bold;color:#333;background-color:#ffec19;padding-left:4px;padding-right:4px;margin-left:5px;font-size:11px;}
+.current_nav{
+	font-weight:bold;
+	font-size:11px;
+}
