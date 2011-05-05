@@ -1,0 +1,78 @@
+<{assign var="page_title" value="`$_product_management`"}>
+<{include file="header.html"}>
+<div class="wrap clearfix">
+<div class="sidebar">
+   <div class="sidebar_menu">
+	 <{include file="menu.html"}>
+   </div>
+</div>
+<div class="main_content">
+	
+<div id="currentPosition">
+	<p><{$_your_current_position}> Quản lý game &raquo; File game</p>
+</div>
+<div id="rightTop"> 
+    <h3><{$_standards}></h3> 
+    <ul class="subnav">
+		<li><a class="btn1" href="product.php"><span>Danh sách game</span></a></li>
+        <li><a href="game.php?pid=<{$smarty.get.pid}>&do=edit">Thêm/Xóa sửa</a></li>
+        <li><a href="game.php?do=type">Danh mục</a></li>
+    </ul>
+</div>
+<div class="mrightTop" style="margin-top:10px;"> 
+    <div class="fontr"> 
+        <form name="search_frm" id="SearchFrm" method="get"> 
+             <div> 
+				Tìm kiềm file game: 
+				  <input class="queryInput" type="text" name="q" value="" /> 
+                <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div style="height:20px;"></div>
+
+<div class="tdare">
+  <form name="list_frm" id="ListFrm" action="standard.php" method="post">
+  <table width="100%" cellspacing="0" class="bglist" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th width="6%" class="firstCell"><input type="checkbox" name="idAll" id="idAll" onclick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th width="25%"><label for="idAll">T&ecirc;n file game </label></th>
+		  <th width="19%">Lo&#7841;i</th>
+		  <th width="50%">Thao t&aacute;c </th>
+		</tr>
+    </thead>
+    <tbody>		<{foreach from=$Items item=item}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onclick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><label for="item_<{$item.id}>"><{$item.title}></label></td>
+	
+		  <td><{$item.typename}></td>
+		  <td class="handler" style="text-align:right">
+          <ul id="handler_icon">
+            <li><a class="btn_delete"  href="game.php?id=<{$item.id}>&pid=<{$smarty.get.pid}>&do=del<{$addParams}>" title="<{$_delete}>"><{$_delete}></a></li>
+            <li><a class="btn_browse"  href="gamehandset.php?gid=<{$item.id}>&pid=<{$smarty.get.pid}>" title="<{$_preview}>">Xem thiết bị</a></li>
+            <li><a class="btn_edit" href="game.php?do=edit&id=<{$item.id}><{$addParams}>" title="<{$_edit}>"><{$_edit}></a></li>
+			<li><a class="btn_edit" href="handset.php?do=edit&gid=<{$item.id}>&pid=<{$smarty.get.pid}>" title="<{$_edit}>">Thêm thiết bị</a></li>
+          </ul>		  </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="5"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" class="formbtn batchButton"/>
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+	</form>
+</div>
+</div>
+<{include file="footer.html"}>

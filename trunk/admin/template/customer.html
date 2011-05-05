@@ -1,0 +1,139 @@
+<{include file="header.html"}>
+<{fetch file="../scripts/date.js"}>
+
+<script src="../scripts/jquery/facebox.js" type="text/javascript"></script>
+<link href="../images/facebox/facebox.css" media="screen" rel="stylesheet" type="text/css"/>
+<script>
+jQuery(document).ready(function($) {
+	$.facebox.settings.loadingImage = '<{$SiteUrl}>images/facebox/loading.gif'; 
+	$.facebox.settings.closeImage = '<{$SiteUrl}>images/facebox/closelabel.gif'; 
+	$('a[rel*=facebox]').facebox() 
+})
+</script>
+
+
+<div id="currentPosition">
+	<p></p>
+</div>
+<div id="rightTop"> 
+    <h3>Thống kê giao dịch (<{$TotalRequest}> lượt tải)</h3> 
+</div>
+<div class="mrightTop"> 
+    <div class="fontr"> 
+        <form name="search_frm" action="customer.php" id="SearchFrm" method="get">
+        <input type="hidden" name="do" value="search" />
+             <div>
+				
+				<select class="querySelect" name="search_type">
+				<option value="Số điện thoại">Số điện thoại</option>
+				<option value="Mã Game" <{if $smarty.get.search_type=="Mã Game"}>selected="selected"<{/if}>>Mã Game</option>
+				</select>
+								
+				<input class="queryInput" type="text" name="q" value="<{$keywork}>" onclick="javascript:this.value=''" /> 
+				Nhà cung cấp :
+				<!--
+				<select class="querySelect" name="type_id">
+				<option value="0">Chọn CP</option>
+                <{foreach from=$TradeTypes item=item key=key}>
+                <option value="<{$key}>"><{$item}></option>
+                <{/foreach}>
+				</select>
+				-->
+				
+				<select class="querySelect" name="cp_id">
+				<option value="">Chọn CP</option>
+				<option value="Kraze" <{if $smarty.get.cp_id=="Kraze"}>selected="selected"<{/if}>>Kraze</option>
+				<option value="Thinknet" <{if $smarty.get.cp_id=="Thinknet"}>selected="selected"<{/if}>>Thinknet</option>
+				<option value="Team" <{if $smarty.get.cp_id=="Team"}>selected="selected"<{/if}>>Team Mobile</option>
+				</select>
+				
+				Từ :
+				
+				<select class="querySelect" name="user_name">
+				<option value="">Nơi yêu cầu</option>
+				<option value="mgame" <{if $smarty.get.user_name=="mgame"}>selected="selected"<{/if}>>mgame</option>
+				<option value="upro" <{if $smarty.get.user_name=="upro"}>selected="selected"<{/if}>>upro</option>
+				<option value="other" <{if $smarty.get.user_name=="other"}>selected="selected"<{/if}>>other</option>
+				</select>
+				
+<{$_arrive_from}>
+				<input name="date1" id="date1" value="<{$fromdate}>" style="width:80px;" /><span class="btn_calendar" id="calendar-date1"></span><{$_arrive_to}><input name="date2" value="<{$todate}>" id="date2" style="width:80px;"/><span class="btn_calendar" id="calendar-date2"></span>
+
+								
+				<select class="querySelect" name="display_pg">
+				<option value="0"><{$_eve_page_display}></option>
+				<option value="10" <{if $smarty.get.display_pg==10}>selected="selected"<{/if}>><{$_eve_page_display}>10</option>
+				<option value="20" <{if $smarty.get.display_pg==20}>selected="selected"<{/if}>><{$_eve_page_display}>20</option>
+				<option value="30" <{if $smarty.get.display_pg==30}>selected="selected"<{/if}>><{$_eve_page_display}>30</option>
+				</select>
+                <input type="submit" id="Search" class="formbtn" value="<{$_searching}>" /> 
+            </div> 
+			<div></div>
+        </form> 
+    </div> 
+    <div class="fontr"></div> 
+</div> 
+<div class="tdare" style="margin-top:10px">
+  <form name="list_frm" id="ListFrm" action="customer.php" method="post">
+  <table style="margin-top:20px;" width="100%" cellspacing="0" class="dataTable" summary="<{$_data_zone}>">
+    <thead>
+		<tr>
+		  <th width="20px" align="left" class="firstCell"><input type="checkbox" name="idAll" id="idAll" onClick="pbCheckAll(this,'id[]');" title="<{$_select_switch}>"></th>
+		  <th width="100px"><label for="idAll">Số điện thoại</label></th>
+		  <th width="130px">Ngày tạo </th>
+  		  <th width="80px">Mã yêu cầu</th>
+		  <th width="80px">Mã game</th>
+		  <th width="80px">Mã CP</th>
+		  <th width="40px" align="center">URL</th>
+		  <th width="60px">Số lần tải </th>		  
+		  <th width="40px">Gọi từ </th>		  
+		  <th width="200px">Thao tác</th>
+		</tr>
+    </thead>
+    <tbody>		<{foreach from=$Items item=item name=adzone}>
+		<tr class="tatr2">
+		  <td class="firstCell"><input type="checkbox" name="id[]" value="<{$item.id}>" onClick="pbCheckItem(this,'idAll');" id="item_<{$item.id}>" title="<{$item.id}>"></td>
+		  <td><a href="#"><label for="item_<{$item.msisdn}>"><{$item.msisdn}></label></a></td>
+		  <td><{$item.create_on}></td>
+		  <td><{$item.req_id}></td>
+		  <td><{$item.cp_game_id}></td>
+		  <td><{$item.cp_id}></td>
+		  <td>
+		  	<div id="info<{$item.Id}>" style="display:none;"><{$item.cp_game_url}></div>
+		  	<{if $item.cp_game_url != ''}>&nbsp;<a href="#info<{$item.Id}>" rel="facebox"><img src="images/right.gif" title="<{$item.cp_game_url}>"/></a><{/if}></td>		  
+		  <td><a href="download.detail.php?req_key=<{$item.req_key}>"><{$item.totals}></a></td>
+		  <td><{$item.user_name}></td>
+		  <td class="handler">
+          	<{if $item.cp_game_url != ''}>&nbsp;<img src="images/success.png" title="<{$item.cp_game_url}>"/><{else}><a href="../process.php?ref=<{$item.req_key}>" target="_blank"><img src="images/notice.png" title="<{$item.cp_game_url}>"/></a><{/if}>		 </td>
+		</tr>
+		<{foreachelse}>
+		<tr class="no_data info">
+		  <td colspan="6"><{$_no_datas}></td>
+		</tr>
+		<{/foreach}>
+    </tbody>
+	</table>
+	<div id="dataFuncs" title="<{$_action_zone}>">
+    <div class="left paddingT15" id="batchAction">
+      <input type="submit" name="del" value="<{$_delete}>" style="width:120px;" class="formbtn batchButton" />
+    </div>
+    <div class="pageLinks"><{$ByPages}></div>
+    <div class="clear"/>
+    </div>
+  </form>
+</div>
+<script>
+    Calendar.setup({
+        trigger    : "calendar-date1",
+		animation  : false,
+        inputField : "date1",
+		onSelect   : function() { this.hide() }
+    });
+    Calendar.setup({
+        trigger    : "calendar-date2",
+		animation  : false,
+        inputField : "date2",
+		onSelect   : function() { this.hide() }
+    });
+</script>
+<{include file="footer.html"}>

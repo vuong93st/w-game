@@ -1,0 +1,74 @@
+<?php
+/**
+ * The Name:English
+ * Description:Admin menu
+ */
+$arrTemplate['_homepage'] = "Home";
+$arrTemplate['_common_action'] = "Common";
+$arrTemplate['_welcome_page'] = "Welcome";
+$arrTemplate['_settings'] = "Settings";
+$arrTemplate['_member_manage'] = "Members";
+$arrTemplate['_member_manage_center'] = "Member Center";
+$arrTemplate['_my_notes'] = "Notes";
+$arrTemplate['_global'] = "Global";
+$arrTemplate['_global_set'] = "Global Setting";
+$arrTemplate['_site_info'] = "Site Info";
+$arrTemplate['_reg_and_visit'] = "Register And Visit";
+$arrTemplate['_functions'] = "Functions";
+$arrTemplate['_cache_setting'] = "Caches";
+$arrTemplate['_time_set'] = "Date Times";
+$arrTemplate['_secure_set'] = "Secure";
+$arrTemplate['_industry'] = "Industry";
+$arrTemplate['_area'] = "Area";
+$arrTemplate['_announcement'] = "Announce";
+$arrTemplate['_userpage'] = "Pages";
+$arrTemplate['_service_center'] = "Services";
+$arrTemplate['_email_set'] = "Email Config";
+$arrTemplate['_info_manage'] = "Trades";
+$arrTemplate['_com_info_manage'] = "Information";
+$arrTemplate['_offer'] = "Offers";
+$arrTemplate['_product_center'] = "Products";
+$arrTemplate['_yellow_page'] = "Company";
+$arrTemplate['_pro_market'] = "Markets";
+$arrTemplate['_job'] = "Jobs";
+$arrTemplate['_fair'] = "Fairs";
+$arrTemplate['_industry_news'] = "News";
+$arrTemplate['_cp_standard'] = "Standards";
+$arrTemplate['_standard'] = "Standards";
+$arrTemplate['_tag_center'] = "Tags";
+$arrTemplate['_keyword_center'] = "Keywords";
+$arrTemplate['_companynews'] = "Company News";
+$arrTemplate['_industry_dict'] = "Dictionary";
+$arrTemplate['_member_center'] = "Members";
+$arrTemplate['_membergroup'] = "Membergroups";
+$arrTemplate['_add_member'] = "Add";
+$arrTemplate['_pms'] = "Messages";
+$arrTemplate['_adminer'] = "Admins";
+$arrTemplate['_change_pass'] = "Change Pass";
+$arrTemplate['_ads'] = "Advertisement";
+$arrTemplate['_ads_manage'] = "Management";
+$arrTemplate['_add_ads'] = "Add Ads";
+$arrTemplate['_adzone'] = "Ads Types";
+$arrTemplate['_service_manage'] = "Service Manage";
+$arrTemplate['_order_center'] = "Orders";
+$arrTemplate['_friendlink'] = "Links";
+$arrTemplate['_templet'] = "Languages";
+$arrTemplate['_templet_language'] = "Languages";
+$arrTemplate['_company_templet'] = "Templets";
+$arrTemplate['_system_templet'] = "Styles";
+$arrTemplate['_nav'] = "Navigate";
+$arrTemplate['_system_tool'] = "Tools";
+$arrTemplate['_cache'] = "Caches";
+$arrTemplate['_log_browse'] = "Logs";
+$arrTemplate['_database'] = "Database";
+$arrTemplate['_passport'] = "Passports";
+$arrTemplate['_check_file'] = "File Check";
+$arrTemplate['_payment_method'] = "Payments";
+$arrTemplate['_extension'] = "Extension";
+$arrTemplate['_trusts'] = "Trusts";
+$arrTemplate['_forms'] = "Forms";
+$arrTemplate['_help_file'] = "FAQ";
+$arrTemplate['_options'] = "Options";
+$arrTemplate['_plugin'] = "Plugins";
+$arrTemplate['_management'] = "Management";
+?>
