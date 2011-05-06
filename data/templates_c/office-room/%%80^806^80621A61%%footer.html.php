@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-04-22 02:40:50
+<?php /* Smarty version 2.6.18, created on 2011-05-06 12:36:55
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'mailto', 'footer.html', 7, false),)), $this); ?>

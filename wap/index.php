@@ -8,7 +8,7 @@ require("../share.inc.php");
 require(CACHE_PATH. "cache_typeoption.php");
 //require(LIB_PATH. 'page.class.php');
 require(APP_ROOT.'./libraries/page.class.php');
-require(APP_ROOT.'./libraries/device.class.php');
+
 //require(LIB_PATH."Tera-WURFL/TeraWurfl.php");
 
 uses("company","industry","product","area","productcategory");
@@ -18,9 +18,6 @@ $page->pagetpl_dir = $theme_name;
 
 $product = new Products();
 
-$device = new Devices();
-
-$device_id = $device->getHandsetId();
 
 
 //$industry = new Industries();
@@ -31,7 +28,6 @@ $productcategories = new Productcategories();
 
 setvar("ProductcategoryOptions", $productcategories->getTypeOptions($_GET['category']));
 
-setvar("Device", $device->getHandsetFullname());
 $conditions = array();
 
 
@@ -88,7 +84,6 @@ $page->setPagenav($amount);
 //$page->setPagenav(100);
 
 $result = $product->findAll("DISTINCT Product.cache_companyname AS companyname,Product.*", $joins, $conditions, "Product.ifcommend desc,Product.id desc", $page->firstcount, $page->displaypg);
-
 
 $result = $product->formatResultWap($result);
 

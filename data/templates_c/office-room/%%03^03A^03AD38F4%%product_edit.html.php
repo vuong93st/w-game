@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-04-23 00:28:30
+<?php /* Smarty version 2.6.18, created on 2011-05-06 12:41:52
          compiled from product_edit.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'html_radios', 'product_edit.html', 39, false),array('modifier', 'default', 'product_edit.html', 39, false),)), $this); ?>

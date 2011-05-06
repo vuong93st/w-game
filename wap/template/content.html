@@ -1,11 +1,11 @@
 <{include file="header.html"}>
-<h1>Wordy</h1>
-<div class="htmlFrame"><div style="padding-bottom: 10px; font-size: x-small;"><{$SortContent}></div><table><tbody><tr><td><img class="pg_thumb" src="<{$Image}>" alt="Game" style="width: 64px; height: 64px;"></td><td><div class="xsmall"><div><img src="Download%20Wordy%20Game%20289%20_%20Zedge_files/stars_0.gif" alt="Grade"></div>
-<div>S&#7889; l&#7847;n t&#7843;i: 333,388</div>
+<h1><{$item.name}></h1>
+<div class="htmlFrame"><div style="padding-bottom: 10px; font-size: x-small;"><{$SortContent}></div><table><tbody><tr><td><img class="pg_thumb" src="<{$item.image}>" alt="Game" style="width: 64px; height: 64px;"></td><td><div class="xsmall"><div><img src="stars_0.gif" alt="3 sao"></div>
+<div>S&#7889; l&#7847;n t&#7843;i: <{$item.clicked}></div>
 <div>
   <a href="#">B&igrave;nh lu&#7853;n(29)</a>
   </div>
-<div>Giá : 15000 vnđ</div>
+<div>Giá : <{$item.price|number_format:0:",":"."}> vnđ</div>
 </div></td></tr></tbody></table>
 <div class="vPad10"><a href="#" rel="nofollow"><strong>T&#7843;i /C&agrave;i &#273;&#7863;t </strong></a> <span style="color: black;">(FREE)</span></div>
 <div style="font-size: xx-small; padding-top: 10px;">
