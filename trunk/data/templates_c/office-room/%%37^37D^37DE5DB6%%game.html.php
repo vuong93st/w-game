@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-05-04 01:45:55
+<?php /* Smarty version 2.6.18, created on 2011-05-06 12:41:58
          compiled from game.html */ ?>
 <?php $this->assign('page_title', ($this->_tpl_vars['_product_management'])); ?>
 <?php $_smarty_tpl_vars = $this->_tpl_vars;

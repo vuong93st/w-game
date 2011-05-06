@@ -10,7 +10,7 @@
   
   <div class="item">
     <a class="" href="content.php?id=<{$item.id}>" style="display: block; text-decoration: none;"><img class="pgthumb" src="<{$item.image}>" alt="" align="left" height="32" width="32"><span style="color: #990000; text-decoration: underline;"><{$item.name}></span><br></a> 
-    <a href="#" style="color:#000000">Tải về   (<{$item.price}>) vnđ</a></div>	
+    <a href="#" style="color:#000000">Tải về   (<{$item.price|number_format:0:",":"."}>) vnđ</a></div>	
   </div>
   
   <{foreachelse}>

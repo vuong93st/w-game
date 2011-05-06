@@ -40,14 +40,15 @@ class Products extends PbModel {
 	{
 		$sql = "SELECT p.* FROM {$this->table_prefix}products p WHERE p.id=".$product_id;
 		$result = $this->dbstuff->GetRow($sql);
+		
 		if (empty($result) || !$result) {
 			return false;
 		}
 		$result['pubdate'] = @date("Y-m-d", $result['created']);
 		if (!empty($result['picture'])) {
-			$result['imgsmall'] = "attachment/".$result['picture'].".small.jpg";
-			$result['imgmiddle'] = "attachment/".$result['picture'].".middle.jpg";
-			$result['image'] = "upload/1234567/images/".$result['picture'];
+			$result['imgsmall'] = "../" . pb_get_attachmenturl($result['picture']).".small.jpg";
+			$result['imgmiddle'] = "../" . pb_get_attachmenturl($result['picture']).".middle.jpg";
+			$result['image'] = "../" . pb_get_attachmenturl($result['picture']);
 			$result['image_url'] = rawurlencode($result['picture']);
 		}else{
 			$result['image'] = pb_get_attachmenturl('', '', 'middle');
@@ -110,8 +111,8 @@ class Products extends PbModel {
 				$result[$i]['url'] = ($rewrite_able)? "product/detail/".$result[$i]['id'].".html":"product/content.php?id=".$result[$i]['id'];;
 				$result[$i]['gradeimg'] = 'images/group/'.$_PB_CACHE['membergroup'][$result[$i]['membergroup_id']]['avatar'];
 				$result[$i]['gradename'] = $_PB_CACHE['membergroup'][$result[$i]['membergroup_id']]['name'];
-				//$result[$i]['image'] = pb_get_attachmenturl($result[$i]['picture']);
-				$result[$i]['image'] =  "../upload/1234567/images/".$result[$i]['picture'];
+				$result[$i]['image'] = "../" . pb_get_attachmenturl($result[$i]['picture']);
+				//$result[$i]['image'] =  "../upload/1234567/images/".$result[$i]['picture'];
 				$trusttype_images = null;
 				if(!empty($result[$i]['trusttype_ids'])){
 					$tmp_trusttype = explode(",", $result[$i]['trusttype_ids']);

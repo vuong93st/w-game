@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-04-25 10:53:37
+<?php /* Smarty version 2.6.18, created on 2011-05-06 17:09:24
          compiled from header.html */ ?>
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><title>Nokia N72 - Game trang 1</title>
