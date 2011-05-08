@@ -24,7 +24,7 @@ if (isset($_GET['pid'])) {
 	$pid = intval($_GET['pid']);
 }
 
-//$device_id = "sonyericsson_w200a_ver1";
+$device_id = "sonyericsson_w200a_ver1";
 $info = $product->getProductById($pid);
 
 if(empty($info)){
@@ -63,7 +63,7 @@ if (isset($_GET['do'])) {
 			}
 			require(LIB_PATH. "download.class.php");
 			require(LIB_PATH. "js.class.php");
-			$download = new Downloads('exe,js,php',false);			
+			$download = new Downloads('',false);			
 			$download->attach_filename = rawurlencode($attachment->getAttachFileName($attach_id));
 			$filename = "../". $attachment->file_url;			
 			if(!$download->downloadfile($filename))
