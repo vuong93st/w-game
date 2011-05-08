@@ -54,7 +54,7 @@ class Downloads {
 			header( "Pragma: public" );
 			header( "Expires: 0" ); // set expiration time
 			header( "Cache-Component: must-revalidate, post-check=0, pre-check=0" );
-			header( "Content-type:".$this->mineType );
+			header( "Content-type:application/java-archive" );
 			header( "Content-Length: " . filesize( $this->filename ) );
 			header( "Content-Disposition: attachment; filename=".$fn );
 			header( 'Content-Transfer-Encoding: binary' );
