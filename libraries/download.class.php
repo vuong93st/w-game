@@ -201,6 +201,7 @@ class Downloads {
 		$this->xlq_filetype['aiff']="audio/x-aiff";
 		$this->xlq_filetype['aifc']="audio/x-aiff";
 		$this->xlq_filetype['swf']="application/x-shockwave-flash";
+		$this->xlq_filetype['jar']="application/java-archive";
 	}
 }
 ?>
