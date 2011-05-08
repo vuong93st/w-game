@@ -25,8 +25,17 @@
 		<input type="hidden" name="gid" value="<{$smarty.get.gid}>" />
 		<input type="hidden" name="do" value="search" />
              <div> 
-				Tìm kiềm file game: 
-				  <input class="queryInput" type="text" name="q" value="" /> 
+				Tên dòng máy:
+				  <input class="queryInput" type="text" name="q" value="" />
+				  <select class="querySelect" name="display">
+                    <option value="">Hiển thị</option>
+                    <option value="128x128" <{if $smarty.get.display=="128x128"}>selected="selected"<{/if}>>128x128
+				    </option>
+                    <option value="240x320" <{if $smarty.get.display=="240x320"}>selected="selected"<{/if}>>240x320
+				    </option>
+                    <option value="176X208" <{if $smarty.get.display=="176X208"}>selected="selected"<{/if}>>176X208
+				    </option>
+                  </select> 
                 <input type="submit" name="search" id="Search" class="formbtn" value="<{$_searching}>" /> 
             </div> 
         </form> 

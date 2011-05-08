@@ -6,7 +6,7 @@
 $arrMessage['_action_successfully'] = "Operation Success"; 
 $arrMessage['_success'] = "Operation Success"; 
 $arrMessage['_thanks_for_advise'] = "Thank you for your participation"; 
-$arrMessage['_action_failed'] = "operation failed"; 
+$arrMessage['_action_'] = "operation failed 1"; 
 $arrMessage['_visitor_forbid'] = "against tourists released information"; 
 $arrMessage['_user_feedback'] = "user reviews"; 
 $arrMessage['_companyname_has_exists'] = "company name already exists"; 

@@ -36,6 +36,8 @@ class Products extends PbModel {
 		return $this->findAll("id,name", null, "Product.state=1 AND Product.status=1 AND Product.member_id={$member_id}", "Product.id DESC",0,8);
 	}
 	
+	
+	
 	function getProductById($product_id)
 	{
 		$sql = "SELECT p.* FROM {$this->table_prefix}products p WHERE p.id=".$product_id;
