@@ -6,5 +6,11 @@ class Games extends PbModel {
  	{
  		parent::__construct();
  	}
+ 	
+	function getInfoById($id){
+ 		$sql = "SELECT * FROM {$this->table_prefix}games WHERE id =" . $id ;
+		$result = $this->dbstuff->GetRow($sql);				
+		return $result;
+ 	}
 }
 ?>

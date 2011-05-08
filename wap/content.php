@@ -10,8 +10,9 @@ require(CACHE_PATH. "cache_typeoption.php");
 require(APP_ROOT.'./libraries/page.class.php');
 //require(LIB_PATH."Tera-WURFL/TeraWurfl.php");
 
-uses("company","industry","product","area","productcategory");
+uses("product","gamehandset","game");
 $product = new Products();
+
 
 $page = new Pages();
 $page->pagetpl_dir = $theme_name;
@@ -20,7 +21,6 @@ $page->pagetpl_dir = $theme_name;
 if (isset($_GET['id'])) {
 	$id = intval($_GET['id']);
 }
-
 
 $info = $product->getProductById($id);
 

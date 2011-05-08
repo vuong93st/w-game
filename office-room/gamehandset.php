@@ -90,8 +90,7 @@ if (isset($_GET['do'])) {
 			$handsetinfo = $handset->read("*",$val);
 			$vals['device_id'] = $handsetinfo['deviceID'];
 			$vals['brand_name'] = $handsetinfo['brand_name'];
-			$vals['model_name'] = $handsetinfo['model_name'];
-
+			$vals['model_name'] = $handsetinfo['model_name'];			
 			$concheck = array();
 			$concheck[] = "device_id='" . $handsetinfo['deviceID']. "'";
 			$concheck[] ="product_id=" . $pid; 

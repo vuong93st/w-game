@@ -27,8 +27,8 @@ $handset = new Handsets();
 
 $conditions = array();
 
-$conditions[] = "brand_name <> ''";
-$conditions[] = "brand_name = 'nokia'";
+//$conditions[] = "brand_name <> ''";
+//$conditions[] = "brand_name = 'nokia'";
 $fields = null;
 $tpl_file = "handset";
 
@@ -69,6 +69,11 @@ if (isset($_GET['do'])) {
 		if(!empty($_GET['q'])) {
 			$search_title = $_GET['q'];
 			$conditions[] = "model_name like '%".$search_title."%'";
+		}
+		
+		if(!empty($_GET['display'])) {
+			$display = $_GET['display'];
+			$conditions[] = "display = '".$display."'";
 		}
 	}
 	if ($do == "del" && !empty($id)){
