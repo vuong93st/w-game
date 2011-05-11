@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-05-06 17:09:24
+<?php /* Smarty version 2.6.18, created on 2011-05-11 17:37:09
          compiled from header.html */ ?>
 <!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head><title>Nokia N72 - Game trang 1</title>
@@ -16,7 +16,8 @@
 <body>
 <div class="small">
 <div style="padding: 4px 4px 4px 5px; height: 10px;" class="hUp">
-<a id="top" href="#"><img class="noborder" src="images/logo.gif" title="" alt="" height="10" width="68"></a><span style="font-size: 10px; color: rgb(234, 234, 234); margin-left: 9px; font-weight: bold;">40 triệu người sử dụng</span></div><div style="padding: 4px 3px 3px; line-height: 9px;" class="hLo"><img style="vertical-align: middle; margin-right: 4px;" class="img" src="Free%20Nokia%20N72%20Games%20-%205-1%20_%20Zedge_files/oldstyle-v2.gif" alt="" height="12" width="7"><?php echo $this->_tpl_vars['Device']; ?>
+<a id="top" href="index.php"><img class="noborder" src="images/logo.gif" title="" alt="" height="10" width="68"></a><span style="font-size: 10px; color: rgb(234, 234, 234); margin-left: 9px; font-weight: bold;"><?php echo $this->_tpl_vars['msisdn']; ?>
+</div><div style="padding: 4px 3px 3px; line-height: 9px;" class="hLo"><img style="vertical-align: middle; margin-right: 4px;" class="img" src="Free%20Nokia%20N72%20Games%20-%205-1%20_%20Zedge_files/oldstyle-v2.gif" alt="" height="12" width="7"><?php echo $this->_tpl_vars['Device']; ?>
  (<a href="#">Chọn</a>)</div>
 <div>
 <form style="padding: 0px 1px 3px 3px; background-color: rgb(238, 238, 238);" action="./" method="get"><span style="font-size: 11px; font-weight: bold;">Tìm kiếm <span style="font-weight: normal;">Game yêu thích</span></span><br>
