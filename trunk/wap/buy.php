@@ -8,23 +8,45 @@ require("../share.inc.php");
 require(CACHE_PATH. "cache_typeoption.php");
 //require(LIB_PATH. 'page.class.php');
 require(APP_ROOT.'./libraries/page.class.php');
+require(APP_ROOT.'./libraries/tinhvan/payment.class.php');
 //require(LIB_PATH."Tera-WURFL/TeraWurfl.php");
 
 uses("product","gamehandset","game");
 $gamehandset = new Gamehandsets();
 $game = new Games();
 
+$payment = new Payments();
+
 $product = new Products();
 
 $page = new Pages();
 $page->pagetpl_dir = $theme_name;
 
+if (isset($_GET['do'])) {
+	$pid = intval($_GET['do']);
+}
 
 if (isset($_GET['pid'])) {
 	$pid = intval($_GET['pid']);
 }
 
-$device_id = "sonyericsson_w200a_ver1";
+if($do == 'charging'){
+	//echo "charging";exit;
+	$charginginfo = $payment->request();
+	if(isset($charginginfo)){
+		$token = $charginginfo[0];
+		$redirectUrl = $charginginfo[1];
+		if($token == "-1" || $token == "-2"){
+			flash("Đăng ký giao dịch không thành công!");
+		}elseif($token != "" && $redirectUrl <> ""){
+			pheader("Location: " . $redirectUrl);
+			//echo $redirectUrl;exit;
+		}		
+	}
+	
+}
+
+//$device_id = "sonyericsson_w200a_ver1";
 $info = $product->getProductById($pid);
 
 if(empty($info)){

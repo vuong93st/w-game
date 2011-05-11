@@ -1,9 +1,9 @@
-<?php /* Smarty version 2.6.18, created on 2011-05-06 17:09:24
+<?php /* Smarty version 2.6.18, created on 2011-05-10 18:05:21
          compiled from footer.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'footer.html', 20, false),)), $this); ?>
-<a class="rlA" href="#"><img src="images/boto_vi_320.gif" style="width:100%;padding-top:4px" /></a>
-<a class="rlA" href="#"><img src="images/GL-Icon_ASP_320.gif" style="width:100%;padding-top:4px"  /></a>
+<a class="rlA" href="#"></a>
+<a class="rlA" href="#"></a>
 
 <div class="fLinks">
 <div class="rl">&lt;<a class="rlA" href="#">Quay l&#7841;i </a>  |  ^<a class="rlA" href="#top">L&ecirc;n &#273;&#7847;u trang </a>  |  <<a class="rlA" href="#">Trang ch&#7911; </a></div>
