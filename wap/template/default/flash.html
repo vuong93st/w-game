@@ -1,0 +1,20 @@
+<{include file="header.html"}>
+<style type="text/css">
+<!--
+body {background: #fcfdff}
+h1 {font-size: xx-small; color: #444; background: url(images/welcome_h1.gif);}
+dl {line-height: 40px; background: url(images/<{$action_img}>) no-repeat left 10px; padding-left: 60px}
+dt {font-size: xx-small; color: #00CC00; font-weight: bold;}
+dd {color: #444;padding-left:0px;}
+a {color: #993333}
+a:hover {color: #CB4D3A}
+p {color: #999; border-top: 1px solid #cbe4f5; text-align: left; padding-top: 20px;}
+-->
+</style>
+<h1>Lời cảnh báo, của nhà quản trị<h1>
+<dl>
+    <dt><a href="<{$url}>" style="text-decoration: none;" title="<{$message|strip_tags}>"><{$message}></a></dt>
+    <dt><a href="<{$url}>" style="text-decoration: none;" title="<{$message|strip_tags}>"></a><a href="javascript:history.back()" class="forward">Quay lại</a></dt>
+</dl>
+<{$redirect}>
+<{include file="footer.html"}>

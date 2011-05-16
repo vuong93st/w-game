@@ -98,9 +98,10 @@ class MySmarty extends Smarty {
 				$this->flash_layout = 'default/flash';
 			}
 		}
+		
 		if (!$this->template_exists($this->flash_layout.$this->tpl_ext)) {
 			die($message);
-		}
+		}		
 		template($this->flash_layout);
 		exit();
 	}

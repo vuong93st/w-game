@@ -21,16 +21,16 @@ $device_id = $device->getHandsetId();
 setvar("Device", $device->getHandsetFullname());
 
 if(isset($_GET['msisdn'])){
-	$_SESSION['Msisdn'] = $_GET['msisdn'];	
+	$_SESSION['msisdn'] = $_GET['msisdn'];	
 }
 
-if (!isset($_SESSION['Msisdn'])) {
+if (!isset($_SESSION['msisdn'])) {
 	pheader("location:".URL."wap/msisdn.php?forward=".urlencode(pb_get_host(). $_SERVER['REQUEST_URI']));
 	//echo urlencode(pb_get_host().$_SERVER['REQUEST_URI'] ); exit;
 }
 
-if(!empty($_SESSION['Msisdn'])){
-	setvar("msisdn", "Xin chào: " . $_SESSION['Msisdn']);
+if(!empty($_SESSION['msisdn'])){
+	setvar("msisdn", "Xin chào: " . $_SESSION['msisdn']);
 }else {
 	setvar("msisdn", "Chưa nhận diện được số điện thoại!");
 }
