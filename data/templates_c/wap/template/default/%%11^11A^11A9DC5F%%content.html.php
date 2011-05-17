@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-05-11 17:38:00
+<?php /* Smarty version 2.6.18, created on 2011-05-18 01:11:47
          compiled from content.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'content.html', 8, false),)), $this); ?>
@@ -20,9 +20,19 @@ unset($_smarty_tpl_vars);
 <div>Giá : <?php echo ((is_array($_tmp=$this->_tpl_vars['item']['price'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 0, ",", ".") : smarty_modifier_number_format($_tmp, 0, ",", ".")); ?>
  vnđ</div>
 </div></td></tr></tbody></table>
-<div class="vPad10"><a href="buy.php?do=charging&pid=<?php echo $this->_tpl_vars['item']['id']; ?>
+<div class="vPad10">
+<?php if ($this->_tpl_vars['item']['iffree'] != 1): ?>
+<a href="buy.php?do=charging&pid=<?php echo $this->_tpl_vars['item']['id']; ?>
 " rel="nofollow"><strong>Mua <?php echo ((is_array($_tmp=$this->_tpl_vars['item']['price'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 0, ",", ".") : smarty_modifier_number_format($_tmp, 0, ",", ".")); ?>
- vnđ </strong></a></div>
+ vnđ </strong></a>
+<?php else: ?>
+<a href="buy.php?do=free&pid=<?php echo $this->_tpl_vars['item']['id']; ?>
+" rel="nofollow"><strong>Mua miễn phí </strong></a>
+<?php endif; ?>
+</div>
+
+<div class=""><span style="color: red; font-size:xx-small;font-style:italic"><?php echo $this->_tpl_vars['attach_alert']; ?>
+</span></div>
 <div style="font-size: xx-small; padding-top: 10px;">
   <p>Giới thiệu:</p>
   <div style="padding-bottom: 10px; font-size: xx-small;"><?php echo $this->_tpl_vars['item']['content']; ?>

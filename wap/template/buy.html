@@ -1,6 +1,12 @@
 <{include file="header.html"}>
 <div class="htmlFrame"><div style="padding-bottom: 10px; font-size: xx-small;"><strong style="font-weight:bold;font-size:small">Bước 1:</strong>Nhấn vào liên kết bên dưới để tải về <{$item.name}>:</div>
-<div class="vPad10"><a href="buy.php?do=download&t=<{$smarty.get.t}>&pid=<{$item.id}>&aid=<{$item.attach_hashid}>" rel="nofollow"><strong>T&#7843;i /C&agrave;i &#273;&#7863;t </strong></a> <span style="color: black;"></span></div>
+<div class="vPad10">
+<{if $item.iffree != 1}>
+<a href="buy.php?do=download&t=<{$smarty.get.t}>&pid=<{$item.id}>&aid=<{$item.attach_hashid}>" rel="nofollow"><strong>T&#7843;i /C&agrave;i &#273;&#7863;t </strong></a>
+<{else}>
+<a href="buy.php?do=download&t=<{$smarty.get.t}>&pid=<{$item.id}>&aid=<{$item.attach_hashid}>" rel="nofollow"><strong>T&#7843;i /C&agrave;i &#273;&#7863;t </strong></a>
+<{/if}>
+ <span style="color: black;"></span></div>
 
 <div class=""><span style="color: red; font-size:xx-small;font-style:italic"><{$attach_alert}></span></div>
 

@@ -48,15 +48,12 @@ if(!empty($token)){
 	}
 }
 
-//$device_id = "sonyericsson_w200a_ver1";
-
 $info = $product->getProductById($pid);
 
 if(empty($info)){
 	flash("không có dữ liệu thỏa mãn yêu cầu!", '', 0);
 }
 
-$gamehandset_info = $gamehandset->getInfo($pid,$device_id);
 
 if($do == 'charging'){		
 	if(empty($_SESSION['msisdn'])){
@@ -97,17 +94,31 @@ if($do == 'charging'){
 	}
 }
 
+if($do == 'free'){
+		$token = pb_radom(24,1);
+		$vals['transection_token'] = $token; 		
+		$vals['transection_time'] = time();
+		$vals['transection_method'] = 'free';
+		$vals['msisdn'] = $_SESSION['msisdn'];		
+		$vals['product_id'] = $pid;	
+		$vals['device_id'] = $device_id;
+		$vals['status'] = 1;
+		$resul_s = $transection->save($vals);
+		if($resul_s == 1){
+			flash("Quá trình mua game đang thực hiện","buy.php?t=" . $token,3);
+		}
+		
+}
+$gamehandset_info = $gamehandset->getInfo($pid,$device_id);
+
 if(!empty($gamehandset_info)){
 	$game_id = $gamehandset_info['game_id'];
-}
-
-$game_info = $game->getInfoById($game_id);
-
-$attach_id = $game_info['attachment_id'];
-
-if(empty($attach_id)){
-	//flash("Không có game tương ứng cho dòng máy của bạn!");
-	setvar("attach_alert","Không có game tương ứng cho dòng máy của bạn");
+	$game_info = $game->getInfoById($game_id);
+	$attach_id = $game_info['attachment_id'];
+}else {
+	$game_info = $game->getInfoDefault($pid);
+	$attach_id = $game_info['attachment_id'];	
+	setvar("attach_alert","Khuyến cáo: Game không hỗ trợ cho điện thoại của bạn");
 }
 
 if (isset($_GET['do'])) {
