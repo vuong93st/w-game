@@ -12,5 +12,11 @@ class Games extends PbModel {
 		$result = $this->dbstuff->GetRow($sql);				
 		return $result;
  	}
+	
+ 	function getInfoDefault($pid){
+ 		$sql = "SELECT * FROM {$this->table_prefix}games where product_id=" . $pid . " order by attachment_default desc" ;
+		$result = $this->dbstuff->GetRow($sql);				
+		return $result;
+ 	}
 }
 ?>
