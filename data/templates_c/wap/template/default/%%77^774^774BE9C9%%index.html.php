@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.18, created on 2011-05-06 17:48:27
+<?php /* Smarty version 2.6.18, created on 2011-05-17 15:50:09
          compiled from index.html */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'index.html', 13, false),)), $this); ?>
@@ -23,7 +23,8 @@ unset($_smarty_tpl_vars);
 " style="display: block; text-decoration: none;"><img class="pgthumb" src="<?php echo $this->_tpl_vars['item']['image']; ?>
 " alt="" align="left" height="32" width="32"><span style="color: #990000; text-decoration: underline;"><?php echo $this->_tpl_vars['item']['name']; ?>
 </span><br></a> 
-    <a href="#" style="color:#000000">Tải về   (<?php echo ((is_array($_tmp=$this->_tpl_vars['item']['price'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 0, ",", ".") : smarty_modifier_number_format($_tmp, 0, ",", ".")); ?>
+    <a href="buy.php?do=charging&pid=<?php echo $this->_tpl_vars['item']['id']; ?>
+" style="color:#000000">Tải về   (<?php echo ((is_array($_tmp=$this->_tpl_vars['item']['price'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 0, ",", ".") : smarty_modifier_number_format($_tmp, 0, ",", ".")); ?>
 ) vnđ</a></div>	
   </div>
   
