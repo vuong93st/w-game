@@ -48,7 +48,7 @@ if(!empty($token)){
 	}
 }
 
-$device_id = "sonyericsson_w200a_ver1";
+//$device_id = "sonyericsson_w200a_ver1";
 
 $info = $product->getProductById($pid);
 
@@ -88,8 +88,7 @@ if($do == 'charging'){
 		$vals['product_id'] = $pid;	
 		$vals['device_id'] = $device_id;
 		$resul_s = $transection->save($vals);
-		
-		if($resul_s == 1 && $token !="" & $token !="-1" & $token != "-2"){
+		if($resul_s == 1 && $token !="" && $token !="-1" && $token != "-2"){
 			pheader("Location: " . $redirectUrl);
 		}
 		else {
