@@ -71,7 +71,7 @@ class Payments extends PbModel
 		$postValue = array();
 		$postValue['o'] = "requestTransaction";
 		$postValue['itemid'] = $info['product_id'];
-		$postValue['itemdesc'] = $info['name'];
+		$postValue['itemdesc'] = urlencode($info['name']);
 		$postValue['price'] = $info['price'];
 		$postValue['method'] = 'Mua_ngay';
 		$postValue['partnerId'] = $partnerId;		
