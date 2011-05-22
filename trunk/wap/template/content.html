@@ -11,7 +11,7 @@
 <{if $item.iffree != 1}>
 <a href="buy.php?do=charging&pid=<{$item.id}>" rel="nofollow"><strong>Mua <{$item.price|number_format:0:",":"."}> vnđ </strong></a>
 <{else}>
-<a href="buy.php?do=free&pid=<{$item.id}>" rel="nofollow"><strong>Mua miễn phí </strong></a>
+<a href="buy.php?do=charging&pid=<{$item.id}>" rel="nofollow"><strong>Mua miễn phí </strong></a>
 <{/if}>
 </div>
 

@@ -26,31 +26,68 @@ $(document).ready(function($) {
 	if(page == 'new'){
 		$("#page-promotion").removeClass("current_nav");
 		$("#page-recommend").removeClass("current_nav");
+		$("#page-free").removeClass("current_nav");
+		$("#page-all").removeClass("current_nav");
 		$("#page-new").toggleClass("current_nav");	
 		
 		$("#page-promotion-bottom").removeClass("current_nav");
 		$("#page-recommend-bottom").removeClass("current_nav");
+		$("#page-free-bottom").removeClass("current_nav");
+		$("#page-all-bottom").removeClass("current_nav");
 		$("#page-new-bottom").toggleClass("current_nav");					
 					
 	}else if((page == 'recommend')){
 		$("#page-promotion").removeClass("current_nav");
 		$("#page-recommend").toggleClass("current_nav");
+		$("#page-free").removeClass("current_nav");
+		$("#page-all").removeClass("current_nav");
 		$("#page-new").removeClass("current_nav");	
 		
 		$("#page-promotion-bottom").removeClass("current_nav");
 		$("#page-recommend-bottom").toggleClass("current_nav");
-		$("#page-new-bottom").removeClass("current_nav");	
-		
+		$("#page-free-bottom").removeClass("current_nav");
+		$("#page-all-bottom").removeClass("current_nav");
+		$("#page-new-bottom").removeClass("current_nav");							
 	}else if((page == 'promotion')){
 		$("#page-promotion").toggleClass("current_nav");
 		$("#page-recommend").removeClass("current_nav");
+		$("#page-free").removeClass("current_nav");
+		$("#page-all").removeClass("current_nav");
 		$("#page-new").removeClass("current_nav");	
 		
 		$("#page-promotion-bottom").toggleClass("current_nav");
 		$("#page-recommend-bottom").removeClass("current_nav");
-		$("#page-new-bottom").removeClass("current_nav");	
+		$("#page-free-bottom").removeClass("current_nav");
+		$("#page-all-bottom").removeClass("current_nav");
+		$("#page-new-bottom").removeClass("current_nav");							
+	}else if((page == 'free')){
+		$("#page-promotion").removeClass("current_nav");
+		$("#page-recommend").removeClass("current_nav");
+		$("#page-free").toggleClass("current_nav");
+		$("#page-all").removeClass("current_nav");
+		$("#page-new").removeClass("current_nav");	
+		
+		$("#page-promotion-bottom").removeClass("current_nav");
+		$("#page-recommend-bottom").removeClass("current_nav");
+		$("#page-free-bottom").toggleClass("current_nav");
+		$("#page-all-bottom").removeClass("current_nav");
+		$("#page-new-bottom").removeClass("current_nav");							
+
+	}else if((page == 'all')){
+		$("#page-promotion").removeClass("current_nav");
+		$("#page-recommend").removeClass("current_nav");
+		$("#page-free").removeClass("current_nav");
+		$("#page-all").toggleClass("current_nav");
+		$("#page-new").removeClass("current_nav");	
+		
+		$("#page-promotion-bottom").removeClass("current_nav");
+		$("#page-recommend-bottom").removeClass("current_nav");
+		$("#page-free-bottom").removeClass("current_nav");
+		$("#page-all-bottom").toggleClass("current_nav");
+		$("#page-new-bottom").removeClass("current_nav");							
 
 	}
+	
 	
 });
 </script>
